@@ -18,9 +18,9 @@ const damageReportSchema = new Schema({
     type: mongoose.Types.ObjectId,
     ref: 'Accounts',
   },
-  materialID: {
+  entityID: {
     type: mongoose.Types.ObjectId,
-    ref: 'Materials',
+    ref: 'Entities',
   },
   createdAt: {
     type: Date,
