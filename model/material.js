@@ -14,14 +14,10 @@ const materialSchema = new Schema({
     type: String,
     require: true,
   },
-  entityID: {
-    type: mongoose.Types.ObjectId,
-    ref: 'Entities',
-  },
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
 
-module.exports = mongoose.model('Materials', materialSchema);
+module.exports = mongoose.model('Material', materialSchema);

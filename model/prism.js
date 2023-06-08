@@ -4,16 +4,36 @@ const Schema = mongoose.Schema;
 const prismSchema = new Schema({
   faceID: {
     type: mongoose.Types.ObjectId,
-    ref: 'Faces',
+    ref: 'Face',
     required: true,
   },
   height: {
     type: Number,
     required: true,
   },
-  attributeID: {
-    type: mongoose.Types.ObjectId,
-    ref: 'Attributes',
+  color: {
+    type: String,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String
+  },
+  path: {
+    type: String,
+    required: true,
+  },
+  materialIds: {
+    type: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: 'Material',
+        required: true,
+      }
+    ],
     required: true,
   },
   createdAt: {
@@ -22,4 +42,4 @@ const prismSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('Prisms', prismSchema);
+module.exports = mongoose.model('Prism', prismSchema);

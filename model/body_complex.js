@@ -2,18 +2,41 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const bodyComplexSchema = new Schema({
-  faceIDs: [{
-    type: mongoose.Types.ObjectId,
-    ref: 'Faces',
-    required: true,
-  }],
-  attributeID: {
-    type: mongoose.Types.ObjectId,
-    ref: 'Attributes',
+  faceIDs: {
+    type: [{
+      type: mongoose.Types.ObjectId,
+      ref: 'Face',
+      required: true,
+    }],
+    required: true
+  },
+  materialIds: {
+    type: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: 'Material',
+        required: true,
+      }
+    ],
     required: true,
   },
   height: {
     type: Number,
+    required: true,
+  },
+  color: {
+    type: String,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String
+  },
+  path: {
+    type: String,
     required: true,
   },
   createdAt: {
@@ -22,4 +45,4 @@ const bodyComplexSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('BodyComplexes', bodyComplexSchema);
+module.exports = mongoose.model('BodyComplexe', bodyComplexSchema);

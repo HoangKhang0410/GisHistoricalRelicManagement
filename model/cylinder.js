@@ -2,10 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const cylinderSchema = new Schema({
-  nodeID: {
-    type: mongoose.Types.ObjectId,
-    ref: 'Nodes',
-    required: true,
+  nodeIds: {
+    type: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: 'Nodes',
+        required: true,
+      }
+    ],
+    required: true
   },
   radius: {
     type: Number,
@@ -15,9 +20,29 @@ const cylinderSchema = new Schema({
     type: Number,
     required: true,
   },
-  attributeID: {
-    type: mongoose.Types.ObjectId,
-    ref: 'Attributes',
+  color: {
+    type: String,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String
+  },
+  path: {
+    type: String,
+    required: true,
+  },
+  materialIds: {
+    type: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: 'Material',
+        required: true,
+      }
+    ],
     required: true,
   },
   createdAt: {
@@ -26,4 +51,4 @@ const cylinderSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('Cylinders', cylinderSchema);
+module.exports = mongoose.model('Cylinder', cylinderSchema);

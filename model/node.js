@@ -20,4 +20,4 @@ const nodeSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('Nodes', nodeSchema);
+module.exports = mongoose.model('Node', nodeSchema);
