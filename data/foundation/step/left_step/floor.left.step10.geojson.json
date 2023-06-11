@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Bậc 10 cầu thang bên trái, ngang 3, dọc 0.3, cao 0.22",
+                "height": 0.22,
+                "width": 3.0,
+                "color": "#838b94",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.5789109125878,16.467681331710192, 2.025],
+                        [107.57891316954206,16.467682942455767, 2.025],
+                        [107.57893844376336,16.467650477387945,2.025],
+                        [107.57893618680929,16.467648866642367,2.025]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

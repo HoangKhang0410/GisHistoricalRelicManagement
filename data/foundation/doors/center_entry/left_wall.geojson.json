@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "generator": "smartcity",
+  "copyright": "Smartcity",
+  "timestamp": "2021-05-27T09:28:58Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Building name": "Tường bên trái của cổng chính",
+        "height": 4.44,
+        "width": 0.5,
+        "color": "#6e6f74",
+        "idb": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [107.5791819016, 16.467682305342, 0],
+            [107.57908445234588, 16.467808825392474, 0],
+            [107.57908822398412, 16.46781149697058, 0],
+            [107.5791856732396, 16.467684976920104, 0]
+          ]
+        ]
+      },
+      "id": "pp1"
+    }
+  ]
+}

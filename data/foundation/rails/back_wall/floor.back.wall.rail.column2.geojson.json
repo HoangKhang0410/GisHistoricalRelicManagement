@@ -1,0 +1,46 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Cột lan 2 tường phía sau",
+                "height": 1.0,
+                "width": 0.2,
+                "color": "#7a443a",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            107.57900575267672,
+                            16.467750612078014,
+                            4.94
+                        ],
+                        [
+                            107.5790042558108,
+                            16.46774952819824,
+                            4.94
+                        ],
+                        [
+                            107.57900312577,
+                            16.467750963541274,
+                            4.94
+                        ],
+                        [
+                            107.57900462271347,
+                            16.467752047100998,
+                            4.94
+                        ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

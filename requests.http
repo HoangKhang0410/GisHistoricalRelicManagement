@@ -16,3 +16,13 @@ Content-Type: application/json
     "email": "ninja@gmail.com",
     "password": "123"
 }
+
+###
+POST http://localhost:3001/api/prism/saveprism
+Content-Type: application/json
+
+{
+    "directoryPath": "../GisHistoricalRelicManagement/data/foundation/doors/center_entry"
+}
+
+

@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "generator": "smartcity",
+  "copyright": "Smartcity",
+  "timestamp": "2021-05-27T09:28:58Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Building name": "Tường bên phải Ngọ Môn phần 2",
+        "height": 4.64,
+        "color": "#723a2d",
+        "idb": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [107.5793156950,16.4679718468,0],
+            [107.57931344963316,16.467970221225244,0],
+            [107.5793117545331,16.467972374495243,0],
+            [107.5793139999,16.46797400007,0]
+          ]
+        ]
+      },
+      "id": "pp1"
+    }
+  ]
+}

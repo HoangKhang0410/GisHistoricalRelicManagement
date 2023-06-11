@@ -11,6 +11,10 @@ const prismSchema = new Schema({
     type: Number,
     required: true,
   },
+  width: {
+    type: Number,
+    required: true,
+  },
   color: {
     type: String,
     required: true
@@ -24,16 +28,6 @@ const prismSchema = new Schema({
   },
   path: {
     type: String,
-    required: true,
-  },
-  materialIds: {
-    type: [
-      {
-        type: mongoose.Types.ObjectId,
-        ref: 'Material',
-        required: true,
-      }
-    ],
     required: true,
   },
   createdAt: {

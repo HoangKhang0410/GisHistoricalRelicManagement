@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường phía trước cổng chính phần 2",
+                "height": 0.2,
+                "color": "#8f8e8b",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57913664198,16.46765024641,4.44],
+                        [107.5791349834043,16.467652425674615,4.44],
+                        [107.57915761323427,16.467668455141617,4.44],
+                        [107.57915927181, 16.467666275877, 4.44]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

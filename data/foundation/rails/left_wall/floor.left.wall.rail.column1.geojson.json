@@ -1,0 +1,45 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Cột lan 1 tường trái",
+                "height": 1.0,
+                "color": "#7a443a",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            107.57891587431456,
+                            16.46763437002261,
+                            4.94
+                        ],
+                        [
+                            107.57891737895031,
+                            16.46763544385283,
+                            4.94
+                        ],
+                        [
+                            107.57891849871308,
+                            16.46763400093696,
+                            4.94
+                        ],
+                        [
+                            107.57891699407682,
+                            16.46763292710641,
+                            4.94
+                        ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

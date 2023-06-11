@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Bậc 20 cầu thang bên trái, ngang 3, dọc 0.3, cao 0.22",
+                "height": 0.22,
+                "width": 3.0,
+                "color": "#838b94",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57893348213173,16.46769743916595, 4.275],
+                        [107.5789357390862,16.467699049911523, 4.275],
+                        [107.57896101330567,16.467666584843716,4.275],
+                        [107.57895875635141,16.467664974098142,4.275]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

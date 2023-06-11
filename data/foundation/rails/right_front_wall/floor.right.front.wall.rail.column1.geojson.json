@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Cột lan 1 tường phía trước bên phải",
+                "height": 1.0,
+                "color": "#7a443a",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57934099924658,16.46769999946451,4.94],
+                        [107.57933988245439,16.467701444496395,4.94],
+                        [107.5793413892975,16.467702515477377,4.94],
+                        [107.57934250608967,16.46770107044549,4.94]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

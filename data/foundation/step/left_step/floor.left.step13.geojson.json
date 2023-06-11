@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Bậc 13 cầu thang bên trái, ngang 3, dọc 0.3, cao 0.22",
+                "height": 0.22,
+                "width": 3.0,
+                "color": "#838b94",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57891768345083,16.46768616394693, 2.7],
+                        [107.57891994040519,16.467687774692507, 2.7],
+                        [107.57894521462586,16.46765530962468,2.7],
+                        [107.5789429576717,16.4676536988791,2.7]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

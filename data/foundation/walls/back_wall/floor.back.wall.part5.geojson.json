@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường phía sau của Ngộ Môn phần 5",
+                "height": 0.2,
+                "color": "#8f8e8b",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [ 107.579061822, 16.4677927959, 4.44 ],
+                        [107.57906349351634,16.467790625746254,4.44],
+                        [107.57904086351621,16.467774596246255,4.44],
+                        [ 107.579039192, 16.4677767664, 4.44 ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

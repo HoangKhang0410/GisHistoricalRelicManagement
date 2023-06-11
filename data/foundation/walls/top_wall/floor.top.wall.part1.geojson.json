@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "generator": "smartcity",
+  "copyright": "Smartcity",
+  "timestamp": "2021-05-27T09:28:58Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Building name": "Nền nhà phần 1",
+        "height": 0.3,
+        "color": "#4f332a",
+        "idb": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [107.57903858372669,16.46748076848895,4.64],
+            [107.57898804585413,16.467546914983245,4.64],
+            [107.57909862067896,16.467625862184875,4.64],
+            [107.5791490490873,16.467559575380648,4.64]
+          ]
+        ]
+      },
+      "id": "pp1"
+    }
+  ]
+}

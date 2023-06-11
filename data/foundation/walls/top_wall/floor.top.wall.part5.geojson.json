@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "generator": "smartcity",
+  "copyright": "Smartcity",
+  "timestamp": "2021-05-27T09:28:58Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Building name": "Nền nhà phần 5",
+        "height": 0.3,
+        "color": "#4f332a",
+        "idb": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [107.57903097888182,16.467716517933393,4.64],
+            [107.5790051718022,16.467749667454942,4.64],
+            [107.5791977643171,16.467885733946254,4.64],
+            [107.5792213686742,16.4678528505462,4.64]
+          ]
+        ]
+      },
+      "id": "pp1"
+    }
+  ]
+}

@@ -24,6 +24,10 @@ const bodyComplexSchema = new Schema({
     type: Number,
     required: true,
   },
+  width: {
+    type: Number,
+    required: true,
+  },
   color: {
     type: String,
     required: true
