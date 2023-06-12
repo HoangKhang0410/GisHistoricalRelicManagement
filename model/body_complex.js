@@ -3,10 +3,9 @@ const Schema = mongoose.Schema;
 
 const bodyComplexSchema = new Schema({
   faceIDs: {
-    type: [{
+    type: [{ 
       type: mongoose.Types.ObjectId,
       ref: 'Face',
-      required: true,
     }],
     required: true
   },
@@ -15,10 +14,8 @@ const bodyComplexSchema = new Schema({
       {
         type: mongoose.Types.ObjectId,
         ref: 'Material',
-        required: true,
       }
-    ],
-    required: true,
+    ]
   },
   height: {
     type: Number,
@@ -49,4 +46,4 @@ const bodyComplexSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('BodyComplexe', bodyComplexSchema);
+module.exports = mongoose.model('BodyComplex', bodyComplexSchema);

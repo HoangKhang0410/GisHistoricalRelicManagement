@@ -5,6 +5,7 @@ require("dotenv").config()
 
 const authRouter = require("./routes/auth")
 const prismController = require("./routes/prism")
+const bodyCompController = require("./routes/bodyComp")
 
 const app = express()
 
@@ -32,6 +33,7 @@ connectDB();
 
 app.use("/api/auth", authRouter)
 app.use("/api/prism", prismController)
+app.use("/api/bodycomp", bodyCompController)
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {

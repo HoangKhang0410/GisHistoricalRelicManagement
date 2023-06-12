@@ -25,4 +25,13 @@ Content-Type: application/json
     "directoryPath": "../GisHistoricalRelicManagement/data/foundation/doors/center_entry"
 }
 
+###
+POST http://localhost:3001/api/bodycomp/savebodycomp
+Content-Type: application/json
+
+{
+    "directoryPath": "../GisHistoricalRelicManagement/data/secondFloor/roof"
+}
+
+
 

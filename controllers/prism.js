@@ -36,23 +36,26 @@ async function savePrismData(data) {
 
     try {
         const transactionResults = await session.withTransaction(async () => {
+            console.log("data: " + data[0].path);
+            var funcSaveDatas = data.map(async prismData => {
+                const nodeIds = await Node.insertMany(prismData.nodes, {session})
+                const face = {
+                    "nodeIds": nodeIds,
+                }
+                const faceResult = await Face.create([face], { session })
 
-            const nodeIds = await Node.insertMany(data.nodes, {session})
-            const face = {
-                "nodeIds": nodeIds,
-            }
-            const faceResult = await Face.create(face)
+                const prism = {
+                    "faceID": faceResult._id,
+                    "height": prismData.height,
+                    "width": prismData.width,
+                    "color": prismData.color,
+                    "name": prismData.name,
+                    "path": prismData.path
+                }
+                await Prism.create([prism], { session })
+            })
 
-            const prism = {
-                "faceID": faceResult._id,
-                "height": data.height,
-                "width": data.width,
-                "color": data.color,
-                "name": data.name,
-                "path": data.path
-            }
-            await Prism.create(prism)
-
+            await Promise.all(funcSaveDatas)
         })
 
         console.log("The savePrismData result: " + transactionResults);
