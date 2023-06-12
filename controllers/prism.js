@@ -3,16 +3,23 @@ const Node = require('../model/node');
 const Face = require('../model/face');
 const mongoose = require("mongoose")
 const { readGeoJsonContent } = require('../utils/read_file');
+const { formatObject } = require('../utils/format_geojson')
 const { getAllJsonFilePathInFolder } = require('../utils/read_json_path');
 
 const prismController = {
   getPrismByPath: async (req, res) => {
     const path = req.query.path;
-    console.log(typeof path)
     try {
-      const prism = await Prism.find();
+      const prism = await Prism.find({ path: path }).populate({
+        path: 'faceID',
+        populate: {
+          path: 'nodeIds',
+        }
+      });
       if (!prism) return res.status(400).json({ success: false, message: 'prism not found' });
-      res.json({ success: true, prism });
+      const result = formatObject(prism)
+      console.log(result)
+      res.json(result);
     } catch (error) {
       console.log(error)
     }
