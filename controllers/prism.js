@@ -1,6 +1,5 @@
 const Prism = require('../model/prism');
 const Node = require('../model/node');
-const Prism = require('../model/prism');
 const Face = require('../model/face');
 const mongoose = require("mongoose")
 const { readGeoJsonContent } = require('../utils/read_file');
