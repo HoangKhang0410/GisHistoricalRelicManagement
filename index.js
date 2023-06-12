@@ -4,6 +4,7 @@ const cors = require("cors")
 require("dotenv").config()
 
 const authRouter = require("./routes/auth")
+const prismController = require("./routes/prism")
 
 const app = express()
 
@@ -30,6 +31,7 @@ const connectDB = async () => {
 connectDB();
 
 app.use("/api/auth", authRouter)
+app.use("/api/prism", prismController)
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {

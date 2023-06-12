@@ -1,14 +1,15 @@
 const fs = require('fs');
-const {getAllJsonFilePathInFolder} = require('./read_json_path.js');
 
 
 const directoryPath = '../data/foundation/doors/center_entry';
 
 
 function readGeoJsonContent(filePath, callback) {
-    fs.readFile(filePath, 'utf8', (err, data) => {
+    return new Promise((resolve, reject) => {
+      fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
           console.error(err);
+          reject(err)
           return;
         }
       
@@ -16,7 +17,7 @@ function readGeoJsonContent(filePath, callback) {
         var path = filePath.split("\\")
         path.splice(0, 2)
         path = parentPath + path.join("/")
-        //console.log(path)
+        console.log(path)
       
         const json = JSON.parse(data);
         var resultData = {}
@@ -40,17 +41,10 @@ function readGeoJsonContent(filePath, callback) {
           })))
         }
        
-        callback(resultData)
+        resolve(resultData)
       });
+    })
 }
-
-// getAllJsonFilePathInFolder(directoryPath)
-// .then(filePaths => filePaths.forEach((path) => {
-//     readGeoJsonContent(path, (data) => {
-//         console.log(data)
-//     })
-// }))
-// .catch(err => console.error(err));
 
 module.exports = {readGeoJsonContent}
 

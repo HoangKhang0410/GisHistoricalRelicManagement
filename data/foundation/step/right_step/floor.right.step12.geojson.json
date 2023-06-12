@@ -1,0 +1,38 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Bậc 12 cầu thang bên phải, ngang 3, dọc 0.3, cao 0.22",
+                "height": 0.22,
+                "width": 3.0,
+                "color": "#838b94",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57931642280724,16.467921666622566,2.475],
+                        [107.57931417744453,16.467920041042834,2.475],
+                        [
+                            107.57928875070492,
+                            16.46795233986155,
+                            2.475
+                        ],
+                        [
+                            107.57929099606791,
+                            16.467953965440987,
+                            2.475
+                        ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

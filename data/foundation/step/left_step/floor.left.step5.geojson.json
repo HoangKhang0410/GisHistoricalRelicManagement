@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Bậc 5 cầu thang bên trái, ngang 3, dọc 0.3, cao 0.22",
+                "height": 0.22,
+                "width": 3.0,
+                "color": "#838b94",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57889962781664,16.467673277982303, 0.9],
+                        [107.57890188477081,16.467674888727878, 0.9],
+                        [107.57892715899301,16.467642423660067,0.9],
+                        [107.57892490203893,16.467640812914492,0.9]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

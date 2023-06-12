@@ -1,0 +1,45 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Cột lan 5 tường trái",
+                "height": 1.0,
+                "color": "#7a443a",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            107.5789655273104,
+                            16.467669806419387,
+                            4.94
+                        ],
+                        [
+                            107.57896703195092,
+                            16.46767088024378,
+                            4.94
+                        ],
+                        [
+                            107.57896815171787,
+                            16.467669437322055,
+                            4.94
+                        ],
+                        [
+                            107.5789666470859,
+                            16.46766836348569,
+                            4.94
+                        ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

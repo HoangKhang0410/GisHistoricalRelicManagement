@@ -1,0 +1,45 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Cột lan  2 tường trái",
+                "height": 1.0,
+                "color": "#7a443a",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            107.578971582502,
+                            16.467562584956926,
+                            4.94
+                        ],
+                        [
+                            107.57897308712462,
+                            16.46756365877756,
+                            4.94
+                        ],
+                        [
+                            107.57897420687355,
+                            16.467562215852112,
+                            4.94
+                        ],
+                        [
+                            107.57897270222355,
+                            16.467561142011967,
+                            4.94
+                        ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

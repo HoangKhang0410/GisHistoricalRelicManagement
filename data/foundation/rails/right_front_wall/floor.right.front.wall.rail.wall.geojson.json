@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường lan can",
+                "height": 0.8,
+                "color": "#ab5c2f",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57934250608967,16.46770107044549,4.94],
+                        [107.5793413892975,16.467702515477377,4.94],
+                        [107.57945937295995,16.467786351855036,4.94],
+                        [107.57946050303626,16.467784916352024,4.94]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

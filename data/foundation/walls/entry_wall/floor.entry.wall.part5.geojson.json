@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường phía trước cổng chính phần 5",
+                "height": 0.2,
+                "color": "#8f8e8b",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [ 107.57923470456, 16.467719707432, 4.44 ],
+                        [107.57923304598373,16.467721886696612,4.44],
+                        [107.57925567582366,16.467737916163614,4.44],
+                        [  107.57925733440, 16.467735736899, 4.44 ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

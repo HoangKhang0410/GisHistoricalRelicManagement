@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Bậc 22 cầu thang bên trái, ngang 3, dọc 0.3, cao 0.22",
+                "height": 0.22,
+                "width": 3.0,
+                "color": "#838b94",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.5789379960407,16.467700660657098, 4.725],
+                        [107.57894025299517,16.467702271402672, 4.725],
+                        [107.57896552721442,16.467669806334865,4.725],
+                        [107.57896327026006,16.46766819558929,4.725]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

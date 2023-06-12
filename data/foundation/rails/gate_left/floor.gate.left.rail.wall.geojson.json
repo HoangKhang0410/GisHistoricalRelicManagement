@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường lan can cổng cái",
+                "height": 0.8,
+                "color": "#ab5c2f",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.5791503764945,16.467559370535273,4.94],
+                        [107.57910103704049,16.467624212636093,4.94],
+                        [107.57910255202795,16.46762527299717,4.94],
+                        [107.57915188153602,16.467560443841943,4.94]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường phía sau của Ngộ Môn phần 4",
+                "height": 4.64,
+                "color": "#8f8e8b",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [ 107.5790844523, 16.46780882539, 0 ],
+                        [107.57908612381642,16.467806655236256,0],
+                        [107.57906349401628,16.467790625766256,0],
+                        [ 107.5790618225, 16.46779279592, 0 ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

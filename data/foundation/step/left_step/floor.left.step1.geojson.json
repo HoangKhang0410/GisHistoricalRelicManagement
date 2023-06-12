@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Bậc 1 cầu thang bên trái, ngang 3, dọc 0.3, cao 0.22",
+                "height": 0.22,
+                "width": 3.0,
+                "color": "#838b94",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.5788906,16.467666835, 0],
+                        [107.57889285695413,16.467668445745574, 0],
+                        [107.57891813117683,16.467635980677766,0],
+                        [107.57891587422297,16.467634369932192,0]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

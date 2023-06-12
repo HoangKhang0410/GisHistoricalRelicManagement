@@ -1,0 +1,45 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Cột lan 3 tường trái",
+                "height": 1.0,
+                "color": "#7a443a",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            107.57903680861891,
+                            16.467478535087558,
+                            4.94
+                        ],
+                        [
+                            107.57903831319999,
+                            16.46747960887823,
+                            4.94
+                        ],
+                        [
+                            107.57903943290648,
+                            16.467478165922866,
+                            4.94
+                        ],
+                        [
+                            107.57903792821426,
+                            16.467477092052793,
+                            4.94
+                        ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

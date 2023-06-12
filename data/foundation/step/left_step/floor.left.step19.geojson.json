@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Bậc 19 cầu thang bên trái, ngang 3, dọc 0.3, cao 0.22",
+                "height": 0.22,
+                "width": 3.0,
+                "color": "#838b94",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57893122517727,16.467695828420375, 4.05],
+                        [107.57893348213173,16.46769743916595, 4.05],
+                        [107.57895875635141,16.467664974098142,4.05],
+                        [107.57895649939702,16.467663363352568,4.05]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

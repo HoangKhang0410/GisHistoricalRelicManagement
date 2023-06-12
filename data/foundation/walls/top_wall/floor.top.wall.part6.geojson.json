@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "generator": "smartcity",
+  "copyright": "Smartcity",
+  "timestamp": "2021-05-27T09:28:58Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Building name": "Nền nhà phần 6",
+        "height": 0.3,
+        "color": "#4f332a",
+        "idb": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [107.5792213686742,16.4678528505462,4.64],
+            [107.5791977643171,16.467885733946254,4.64],
+            [107.57926629707818,16.467936084065112,4.64],
+            [107.57929172381922,16.46790378524644,4.64]
+          ]
+        ]
+      },
+      "id": "pp1"
+    }
+  ]
+}

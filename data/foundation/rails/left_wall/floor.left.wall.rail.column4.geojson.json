@@ -1,0 +1,45 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Cột lan 4 tường trái",
+                "height": 1.0,
+                "color": "#7a443a",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            107.57888899999806,
+                            16.467668999998637,
+                            4.94
+                        ],
+                        [
+                            107.57889050463277,
+                            16.46767007382818,
+                            4.94
+                        ],
+                        [
+                            107.57889162439483,
+                            16.46766863091168,
+                            4.94
+                        ],
+                        [
+                            107.57889011975787,
+                            16.467667557080475,
+                            4.94
+                        ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Bậc 8 cầu thang bên phải, ngang 3, dọc 0.3, cao 0.22",
+                "height": 0.22,
+                "width": 3.0,
+                "color": "#838b94",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57932540425794,16.46792816894107,1.575],
+                        [107.57932315889524,16.467926543361372,1.575],
+                        [
+                            107.57929773215612,
+                            16.467958842180103,
+                            1.575
+                        ],
+                        [
+                            107.57929997751914,
+                            16.467960467759635,
+                            1.575
+                        ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

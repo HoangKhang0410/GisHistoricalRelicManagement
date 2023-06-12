@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường trái của Ngọ Môn phần 1",
+                "height": 4.64,
+                "color": "#723a2d",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57888900559878,16.467668992785423, 0],
+                        [107.57889126255294,16.467670603531047,0],
+                        [107.57889293659898,16.46766844637208,0],
+                        [107.5788906796449,16.467666835626456, 0]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

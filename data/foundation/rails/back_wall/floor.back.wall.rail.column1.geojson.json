@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "generator": "smartcity",
+  "copyright": "Smartcity",
+  "timestamp": "2021-05-27T09:28:58Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Building name": "Cột lan 1 tường phía sau",
+        "height": 1.0,
+        "width": 0.2,
+        "color": "#7a443a",
+        "idb": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [107.57919646052275, 16.467887478232022, 4.94],
+            [107.5791949635873, 16.467886394439883, 4.94],
+            [107.57919383347954, 16.467887829870577, 4.94],
+            [107.57919533035574, 16.467888913517953, 4.94]
+          ]
+        ]
+      },
+      "id": "pp1"
+    }
+  ]
+}
