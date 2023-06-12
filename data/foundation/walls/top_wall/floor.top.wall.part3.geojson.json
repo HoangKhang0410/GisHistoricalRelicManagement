@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "generator": "smartcity",
+  "copyright": "Smartcity",
+  "timestamp": "2021-05-27T09:28:58Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Building name": "Nền nhà phần 3",
+        "height": 0.3,
+        "color": "#4f332a",
+        "idb": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [107.57898804585413,16.467546914983245,4.64],
+            [107.57891813126844,16.46763598076817,4.64],
+            [107.57903097888182,16.467716517933393,4.64],
+            [107.57910089348248,16.467627452302665,4.64]
+          ]
+        ]
+      },
+      "id": "pp1"
+    }
+  ]
+}

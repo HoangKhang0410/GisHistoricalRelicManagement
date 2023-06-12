@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường phía sau của Ngộ Môn phần 6",
+                "height": 4.64,
+                "color": "#8f8e8b",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [ 107.5790391927    , 16.46777676646, 0 ],
+                        [107.57904086421614,16.467774596306253,0],
+                        [107.5790046565159,16.467748949136254,0],
+                        [107.57900320786882,16.46775082993615,0]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

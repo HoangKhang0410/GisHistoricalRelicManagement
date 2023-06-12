@@ -1,0 +1,31 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường phía trước cổng chính phần 6",
+                "height": 4.64,
+                "color": "#8f8e8b",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57925790554444,16.467735023606128,0],
+                        [107.57925567582366,16.467737916163614,0],
+                        [107.57929134212335,16.467764179794614,0],
+                        [107.5792930007,16.46776200053,0],
+                        [107.57926477244098,16.46774121405716,0],
+                        [107.57926534358545,16.467740500764286,0]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường phía sau của Ngộ Môn phần 2",
+                "height": 0.2,
+                "color": "#8f8e8b",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [ 107.57915988511904, 16.467862256949, 4.44 ],
+                        [107.579161556636,16.467860086795255,4.44],
+                        [107.57913892651678,16.467844056846253,4.44],
+                        [ 107.579137255, 16.467846227, 4.44 ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

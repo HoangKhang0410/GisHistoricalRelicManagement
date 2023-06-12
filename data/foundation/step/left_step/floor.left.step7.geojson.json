@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Bậc 7 cầu thang bên trái, ngang 3, dọc 0.3, cao 0.22",
+                "height": 0.22,
+                "width": 3.0,
+                "color": "#838b94",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57890414172498,16.467676499473455, 1.35],
+                        [107.57890639867924,16.467678110219033, 1.35],
+                        [107.57893167290105,16.467645645151215,1.35],
+                        [107.57892941594707,16.467644034405637,1.35]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

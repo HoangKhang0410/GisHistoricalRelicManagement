@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "generator": "smartcity",
+  "copyright": "Smartcity",
+  "timestamp": "2021-05-27T09:28:58Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Building name": "Nền nhà phần 8",
+        "height": 0.3,
+        "color": "#4f332a",
+        "idb": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [107.579341584323,16.467703773483787,4.64],
+            [107.57929415530444,16.46776505984431,4.64],
+            [107.57941018230805,16.467847525346944,4.64],
+            [107.57945807939363,16.467786542039953,4.64]
+          ]
+        ]
+      },
+      "id": "pp1"
+    }
+  ]
+}

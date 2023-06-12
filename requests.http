@@ -18,6 +18,17 @@ Content-Type: application/json
 }
 
 ###
+<<<<<<< HEAD
 
 GET http://localhost:3001/api/prism/path?path=ngomon/data/foundation/doors/center_entry/left_wall.geojson.json
 Content-Type: application/json
+=======
+POST http://localhost:3001/api/prism/saveprism
+Content-Type: application/json
+
+{
+    "directoryPath": "../GisHistoricalRelicManagement/data/foundation/doors/center_entry"
+}
+
+
+>>>>>>> d6d05572d1e1835b143dd7332551fb9c27cc0033

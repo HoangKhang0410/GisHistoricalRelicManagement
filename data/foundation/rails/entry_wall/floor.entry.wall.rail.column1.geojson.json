@@ -1,0 +1,46 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Cột lan 1 tường cổng chính",
+                "height": 1.0,
+                "width": 0.2,
+                "color": "#7a443a",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            107.57910103704049,
+                            16.467624212636093,
+                            4.94
+                        ],
+                        [
+                            107.57909993132294,
+                            16.46762566547874,
+                            4.94
+                        ],
+                        [
+                            107.57910144626786,
+                            16.46762672582999,
+                            4.94
+                        ],
+                        [
+                            107.57910255202785,
+                            16.46762527299712,
+                            4.94
+                        ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

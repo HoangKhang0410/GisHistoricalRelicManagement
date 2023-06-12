@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường lan can cổng phải",
+                "height": 0.8,
+                "color": "#ab5c2f",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [107.57933988245439,16.467701444496395,4.94],
+                        [107.57929355977687,16.467761278457516,4.94],
+                        [107.57929507476533,16.46776233881858,4.94],
+                        [107.5793413892975,16.467702515477377,4.94]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

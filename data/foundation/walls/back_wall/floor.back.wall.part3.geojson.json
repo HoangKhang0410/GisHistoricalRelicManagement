@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tường phía sau của Ngộ Môn phần 3",
+                "height": 4.64,
+                "color": "#8f8e8b",
+                "idb": "1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [ 107.579137255, 16.467846227, 0 ],
+                        [107.57913892651678,16.467844056846253,0],
+                        [107.57911629691662,16.467828027856253,0],
+                        [ 107.5791146254, 16.46783019801, 0 ]
+                    ]
+                ]
+            },
+            "id": "pp1"
+        }
+    ]
+}

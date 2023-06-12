@@ -4,7 +4,11 @@ const cors = require("cors")
 require("dotenv").config()
 
 const authRouter = require("./routes/auth")
+<<<<<<< HEAD
 const prismRouter = require("./routes/prism")
+=======
+const prismController = require("./routes/prism")
+>>>>>>> d6d05572d1e1835b143dd7332551fb9c27cc0033
 
 const app = express()
 

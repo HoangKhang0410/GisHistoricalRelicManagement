@@ -12,7 +12,7 @@ const cylinderSchema = new Schema({
     ],
     required: true
   },
-  radius: {
+  width: {
     type: Number,
     required: true,
   },
