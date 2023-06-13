@@ -43,7 +43,6 @@ const cylinderSchema = new Schema({
         required: true,
       }
     ],
-    required: true,
   },
   createdAt: {
     type: Date,

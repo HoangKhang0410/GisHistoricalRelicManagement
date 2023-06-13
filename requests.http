@@ -38,5 +38,13 @@ Content-Type: application/json
     "directoryPath": "../GisHistoricalRelicManagement/data/secondFloor/roof"
 }
 
+###
+POST http://localhost:3001/api/cylinder/savecylinder
+Content-Type: application/json
+
+{
+    "directoryPath": "../GisHistoricalRelicManagement/data/secondFloor/column"
+}
+
 
 

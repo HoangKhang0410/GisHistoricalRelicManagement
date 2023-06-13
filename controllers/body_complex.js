@@ -51,42 +51,42 @@ async function saveBodyCompData(data) {
   const session = await mongoose.startSession()
 
   try {
-      await session.withTransaction(async () => {
-          var funcSaveDatas = data.map(async bodyCompData => {
-              const faceIds = []
+    await session.withTransaction(async () => {
+      var funcSaveDatas = data.map(async bodyCompData => {
+        const faceIds = []
 
-              for(const face of bodyCompData.faces) {
-                  const nodeIds = await Node.insertMany(face, { session })
-                  const faceData = {
-                      "nodeIds": nodeIds,
-                  }
-                  const faceResult = await Face.create([faceData], { session })
-                  faceIds.push(faceResult[0]._id)
-              } 
+        for (const face of bodyCompData.faces) {
+          const nodeIds = await Node.insertMany(face, { session })
+          const faceData = {
+            "nodeIds": nodeIds,
+          }
+          const faceResult = await Face.create([faceData], { session })
+          faceIds.push(faceResult[0]._id)
+        }
 
-              const bodyComp = {
-                  "faceIDs": faceIds,
-                  "height": bodyCompData.height,
-                  "width": bodyCompData.width,
-                  "color": bodyCompData.color,
-                  "name": bodyCompData.name,
-                  "path": bodyCompData.path
-              }
-              await BodyComplex.create([bodyComp], { session })
-          })
-
-          for (const funSaveData of funcSaveDatas) await funSaveData;
-      }, {
-          readPreference: 'primary',
-          writeConcern: { w: 'majority' },
-          maxTimeMS: 10000
+        const bodyComp = {
+          "faceIDs": faceIds,
+          "height": bodyCompData.height,
+          "width": bodyCompData.width,
+          "color": bodyCompData.color,
+          "name": bodyCompData.name,
+          "path": bodyCompData.path
+        }
+        await BodyComplex.create([bodyComp], { session })
       })
 
-      console.log("The saveBodyCompData was successfully created.");
+      for (const funSaveData of funcSaveDatas) await funSaveData;
+    }, {
+      readPreference: 'primary',
+      writeConcern: { w: 'majority' },
+      maxTimeMS: 10000
+    })
+
+    console.log("The saveBodyCompData was successfully created.");
   } catch (error) {
-      console.log("The transaction was aborted due to an unexpected error: " + error);
+    console.log("The transaction was aborted due to an unexpected error: " + error);
   } finally {
-      session.endSession();
+    session.endSession();
   }
 }
 
