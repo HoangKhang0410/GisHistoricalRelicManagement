@@ -27,7 +27,16 @@ POST http://localhost:3001/api/prism/saveprism
 Content-Type: application/json
 
 {
-    "directoryPath": "../GisHistoricalRelicManagement/data/foundation/doors/center_entry"
+    "directoryPath": "../GisHistoricalRelicManagement/data/secondFloor/door/BDoor"
 }
+
+###
+POST http://localhost:3001/api/bodyComplex/savebodycomp
+Content-Type: application/json
+
+{
+    "directoryPath": "../GisHistoricalRelicManagement/data/secondFloor/roof"
+}
+
 
 

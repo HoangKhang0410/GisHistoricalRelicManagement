@@ -7,84 +7,80 @@ const { formatObject } = require('../utils/format_geojson')
 const { getAllJsonFilePathInFolder } = require('../utils/read_json_path');
 
 const prismController = {
-  getPrismByPath: async (req, res) => {
-    const path = req.query.path;
-    try {
-      const prism = await Prism.find({ path: path }).populate({
-        path: 'faceID',
-        populate: {
-          path: 'nodeIds',
+    savePrism: async (req, res) => {
+        const { directoryPath } = req.body
+        await getAllJsonFilePathInFolder(directoryPath)
+            .then(filePaths => {
+                filePaths.forEach(async (path) => {
+                    await readGeoJsonContent(path)
+                        .then(async data => await savePrismData(data))
+                        .catch((err => {
+                            console.log(err)
+                        }))
+                })
+                res.json({
+                    success: true,
+                    message: 'save prism successfully!',
+                });
+            })
+            .catch(err => {
+                console.log(err)
+                res.status(500).json({ success: false, message: 'Internal server error' });
+            });
+    },
+    getPrismByPath: async (req, res) => {
+        const path = req.query.path;
+        try {
+            const prism = await Prism.find({ path: path }).populate({
+                path: 'faceID',
+                populate: {
+                    path: 'nodeIds',
+                }
+            });
+            if (!prism) return res.status(400).json({ success: false, message: 'prism not found' });
+            const result = formatObject(prism, "prism")
+            console.log(result)
+            res.json(result);
+        } catch (error) {
+            console.log(error)
         }
-      });
-      if (!prism) return res.status(400).json({ success: false, message: 'prism not found' });
-      const result = formatObject(prism, "prism")
-      console.log(result)
-      res.json(result);
-    } catch (error) {
-      console.log(error)
     }
-  },
-  savePrism: async (req, res) => {
-    const { directoryPath } = req.body
-    await getAllJsonFilePathInFolder(directoryPath)
-      .then(filePaths => {
-        filePaths.forEach(async (path) => {
-          await readGeoJsonContent(path)
-            .then(async data => await savePrismData(data))
-            .catch((err => {
-              console.log(err)
-            }))
-        })
-        res.json({
-          success: true,
-          message: 'save prism successfully!',
-        });
-      })
-      .catch(err => {
-        console.log(err)
-        res.status(500).json({ success: false, message: 'Internal server error' });
-      });
-  }
 }
 
 async function savePrismData(data) {
-  const session = await mongoose.startSession()
+    const session = await mongoose.startSession()
 
-  try {
-    const transactionResults = await session.withTransaction(async () => {
+    try {
+        await session.withTransaction(async () => {
+            for (const prismData of data) {
+                const nodeIds = await Node.insertMany(prismData.nodes, { session })
+                const face = {
+                    "nodeIds": nodeIds,
+                }
+                const faceResult = await Face.create([face], { session })
 
-      const nodeIds = await Node.insertMany(data.nodes, { session })
-      const face = {
-        "nodeIds": nodeIds,
-      }
-      const faceResult = await Face.create(face)
+                const prism = {
+                    "faceID": faceResult[0]._id,
+                    "height": prismData.height,
+                    "width": prismData.width,
+                    "color": prismData.color,
+                    "name": prismData.name,
+                    "path": prismData.path
+                }
+                await Prism.create([prism], { session })
+            }
+        }, {
+            readPreference: 'primary',
+            writeConcern: { w: 'majority' },
+            maxTimeMS: 10000
+        })
 
-      const prism = {
-        "faceID": faceResult._id,
-        "height": data.height,
-        "width": data.width,
-        "color": data.color,
-        "name": data.name,
-        "path": data.path
-      }
-      await Prism.create(prism)
-
-    })
-
-    console.log("The savePrismData result: " + transactionResults);
-    if (transactionResults) {
-      console.log("The savePrismData was successfully created.");
-    } else {
-      console.log("The savePrismData was intentionally aborted.");
+        console.log("The savePrismData was successfully created.");
+    } catch (error) {
+        console.log("The transaction was aborted due to an unexpected error: " + error);
+    } finally {
+        session.endSession();
     }
-
-    return transactionResults
-  } catch (error) {
-    console.log("The transaction was aborted due to an unexpected error: " + e);
-  } finally {
-    session.endSession();
-    return null
-  }
 }
 
 module.exports = prismController
