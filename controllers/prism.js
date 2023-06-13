@@ -35,17 +35,19 @@ async function savePrismData(data) {
     const session = await mongoose.startSession()
 
     try {
-        const transactionResults = await session.withTransaction(async () => {
+        await session.withTransaction(async () => {
             console.log("data: " + data[0].path);
-            var funcSaveDatas = data.map(async prismData => {
+            for(const prismData of data) {
                 const nodeIds = await Node.insertMany(prismData.nodes, {session})
                 const face = {
                     "nodeIds": nodeIds,
                 }
                 const faceResult = await Face.create([face], { session })
 
+                console.log(faceResult[0]._id)
+
                 const prism = {
-                    "faceID": faceResult._id,
+                    "faceID": faceResult[0]._id,
                     "height": prismData.height,
                     "width": prismData.width,
                     "color": prismData.color,
@@ -53,24 +55,18 @@ async function savePrismData(data) {
                     "path": prismData.path
                 }
                 await Prism.create([prism], { session })
-            })
-
-            await Promise.all(funcSaveDatas)
+            }
+        }, {
+            readPreference: 'primary',
+            writeConcern: { w: 'majority' },
+            maxTimeMS: 10000
         })
 
-        console.log("The savePrismData result: " + transactionResults);
-        if (transactionResults) {
-            console.log("The savePrismData was successfully created.");
-        } else {
-            console.log("The savePrismData was intentionally aborted.");
-        }
-        
-        return transactionResults
+        console.log("The savePrismData was successfully created.");
     } catch (error) {
-        console.log("The transaction was aborted due to an unexpected error: " + e);
+        console.log("The transaction was aborted due to an unexpected error: " + error);
     } finally {
         session.endSession();
-        return null
     }
 }
 

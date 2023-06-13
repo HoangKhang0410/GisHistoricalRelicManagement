@@ -6,6 +6,7 @@ const bodyComplexSchema = new Schema({
     type: [{ 
       type: mongoose.Types.ObjectId,
       ref: 'Face',
+      required: true,
     }],
     required: true
   },

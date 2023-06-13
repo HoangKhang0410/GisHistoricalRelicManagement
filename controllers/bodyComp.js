@@ -36,19 +36,15 @@ async function saveBodyCompData(data) {
     try {
         await session.withTransaction(async () => {
             var funcSaveDatas = data.map(async bodyCompData => {
-                var nodeCount = 0
-                var savedNodeCount = 0
                 const faceIds = []
 
                 for(const face of bodyCompData.faces) {
-                    nodeCount += face.length
                     const nodeIds = await Node.insertMany(face, { session })
-                    savedNodeCount += nodeIds.length
                     const faceData = {
                         "nodeIds": nodeIds,
                     }
                     const faceResult = await Face.create([faceData], { session })
-                    faceIds.push(faceResult._id)
+                    faceIds.push(faceResult[0]._id)
                 } 
 
                 const bodyComp = {
