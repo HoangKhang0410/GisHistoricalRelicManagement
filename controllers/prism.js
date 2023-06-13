@@ -17,7 +17,7 @@ const prismController = {
         }
       });
       if (!prism) return res.status(400).json({ success: false, message: 'prism not found' });
-      const result = formatObject(prism)
+      const result = formatObject(prism, "prism")
       console.log(result)
       res.json(result);
     } catch (error) {

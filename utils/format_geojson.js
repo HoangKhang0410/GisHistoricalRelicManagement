@@ -1,9 +1,29 @@
-const formatObject = (data) => {
-  const coordinates = data.map(item => {
-    return item.faceID.nodeIds.map(node => {
-      return [node.x, node.y, node.z]
-    })
-  })
+const formatObject = (data, type) => {
+  var coordinates, polygonType
+  switch (type) {
+    case "prism":
+      coordinates = data.map(item => {
+        return item.faceID.nodeIds.map(node => {
+          return [node.x, node.y, node.z]
+        })
+      })
+      polygonType = "Polygon"
+      break;
+    case "cylinder":
+      break;
+    case "bodyComplex":
+      coordinates = data.map(item => {
+        return item.faceIDs.map(face => {
+          return face.nodeIds.map(node => {
+            return [node.x, node.y, node.z]
+          })
+        })
+      })
+      polygonType = "MultiPolygon"
+      break;
+    default:
+      break;
+  }
   const result = {
     "type": "FeatureCollection",
     "generator": "smartcity",
@@ -20,7 +40,7 @@ const formatObject = (data) => {
           "idb": "1"
         },
         "geometry": {
-          "type": "Polygon",
+          "type": polygonType,
           "coordinates": coordinates
         }
       }
