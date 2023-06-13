@@ -44,6 +44,19 @@ const bodyComplexController = {
         console.log(err)
         res.status(500).json({ success: false, message: 'Internal server error' });
       });
+  },
+  deleteBodyComp: async (req, res) => {
+    try {
+      const path = req.query.path;
+      await deleteBodyCompDocument(path)
+      res.json({
+        success: true,
+        message: 'Delete body comp successfully!',
+      });
+    } catch (error) {
+      console.log(error)
+      res.status(500).json({ success: false, message: 'Internal server error' });
+    }
   }
 }
 
@@ -89,5 +102,40 @@ async function saveBodyCompData(data) {
     session.endSession();
   }
 }
+
+async function deleteBodyCompDocument(path) {
+  const session = await mongoose.startSession()
+  try {
+    await session.withTransaction(async () => {
+      const deleteBodyCompDocs = await BodyComplex.find({ path })
+      if (deleteBodyCompDocs.length != 0) {
+        const bodyComp = await BodyComplex.deleteMany({ path }, { session })
+        if (bodyComp) {
+          const faceIds = deleteBodyCompDocs.flatMap(deleteBodyComp => deleteBodyComp.faceIDs)
+          const deleteFaceDocs = await Face.find({ _id: { $in: faceIds } })
+
+          await Face.deleteMany({ _id: { $in: faceIds } }, { session })
+
+          const nodeIds = deleteFaceDocs.flatMap(deleteFace => deleteFace.nodeIds)
+          await Node.deleteMany({ _id: { $in: nodeIds } }, { session })
+        }
+      } else {
+        console.log("Not found any body comp with path: " + path);
+      }
+    }, {
+      readPreference: 'primary',
+      writeConcern: { w: 'majority' },
+      maxTimeMS: 10000
+    })
+
+  } catch (error) {
+    console.log("The deleteBodyCompDocument was aborted due to an unexpected error: " + error);
+    throw error
+  } finally {
+    session.endSession();
+  }
+}
+
+
 
 module.exports = bodyComplexController

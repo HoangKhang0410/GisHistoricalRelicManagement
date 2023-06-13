@@ -46,5 +46,15 @@ Content-Type: application/json
     "directoryPath": "../GisHistoricalRelicManagement/data/secondFloor/column"
 }
 
+###
+DELETE  http://localhost:3001/api/cylinder/delete?path=ngomon/data/secondFloor/column/columnExtraL.geojson.json
+
+###
+DELETE  http://localhost:3001/api/prism/delete?path=ngomon/data/secondFloor/door/BDoor/CB.BDoor.decoHoriDoor7.geojson.json
+
+###
+DELETE  http://localhost:3001/api/bodyComplex/delete?path=ngomon/data/secondFloor/roof/CB.SF.decoRoof1.geojson.json
+
+
 
 
