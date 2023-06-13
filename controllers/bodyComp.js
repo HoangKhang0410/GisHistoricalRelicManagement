@@ -13,22 +13,22 @@ const bodyCompController = {
                 console.log("filePaths size: " + filePaths.length)
                 filePaths.forEach(async (path) => {
                     await readGeoJsonContent(path)
-                    .then(async data => await saveBodyCompData(data))
-                    .catch((err => {
-                        console.log(err)
-                    }))
+                        .then(async data => await saveBodyCompData(data))
+                        .catch((err => {
+                            console.log(err)
+                        }))
                 })
                 res.json({
                     success: true,
                     message: 'save body comp successfully!',
-                  });
+                });
             })
             .catch(err => {
                 console.log(err)
                 res.status(500).json({ success: false, message: 'Internal server error' });
             });
     }
-} 
+}
 
 async function saveBodyCompData(data) {
     const session = await mongoose.startSession()
@@ -38,34 +38,21 @@ async function saveBodyCompData(data) {
             var funcSaveDatas = data.map(async bodyCompData => {
                 var nodeCount = 0
                 var savedNodeCount = 0
-                const faceIds = bodyCompData.faces.map(async face => {
+                const faceIds = []
+
+                for(const face of bodyCompData.faces) {
                     nodeCount += face.length
-                    const nodeIds = await Node.insertMany(face, {session})
+                    const nodeIds = await Node.insertMany(face, { session })
                     savedNodeCount += nodeIds.length
                     const faceData = {
                         "nodeIds": nodeIds,
                     }
                     const faceResult = await Face.create([faceData], { session })
-                    return faceResult._id
-                })
-
-                const faceIdsResult = []
-
-                faceIds.reduce((previousPromise, currentPromise) => {
-                    return previousPromise.then(() => {
-                        return currentPromise;
-                    });
-                }, Promise.resolve())
-                .then(result => {
-                    faceIdsResult = [...result]
-                    console.log("All promises completed successfully", result);
-                })
-                .catch(error => {
-                    console.error("An error occurred", error);
-                });
+                    faceIds.push(faceResult._id)
+                } 
 
                 const bodyComp = {
-                    "faceIDs": faceIdsResult,
+                    "faceIDs": faceIds,
                     "height": bodyCompData.height,
                     "width": bodyCompData.width,
                     "color": bodyCompData.color,
@@ -75,7 +62,11 @@ async function saveBodyCompData(data) {
                 await BodyComplex.create([bodyComp], { session })
             })
 
-           for(const funSaveData of funcSaveDatas) await funSaveData;
+            for (const funSaveData of funcSaveDatas) await funSaveData;
+        }, {
+            readPreference: 'primary',
+            writeConcern: { w: 'majority' },
+            maxTimeMS: 10000
         })
 
         console.log("The saveBodyCompData was successfully created.");
