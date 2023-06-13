@@ -10,7 +10,7 @@ const bodyCompController = {
         const { directoryPath } = req.body
         await getAllJsonFilePathInFolder(directoryPath)
             .then(filePaths => {
-                console.log("filePaths size: " + filePaths.length)
+                console.log("body comp filePaths" + filePaths)
                 filePaths.forEach(async (path) => {
                     await readGeoJsonContent(path)
                         .then(async data => await saveBodyCompData(data))

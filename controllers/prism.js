@@ -12,6 +12,7 @@ const prismController = {
         const { directoryPath } = req.body
         await getAllJsonFilePathInFolder(directoryPath)
             .then(filePaths => {
+                console.log("prism filePaths" + filePaths)
                 filePaths.forEach(async (path) => {
                     await readGeoJsonContent(path)
                     .then(async data => await savePrismData(data))
@@ -36,15 +37,12 @@ async function savePrismData(data) {
 
     try {
         await session.withTransaction(async () => {
-            console.log("data: " + data[0].path);
             for(const prismData of data) {
                 const nodeIds = await Node.insertMany(prismData.nodes, {session})
                 const face = {
                     "nodeIds": nodeIds,
                 }
                 const faceResult = await Face.create([face], { session })
-
-                console.log(faceResult[0]._id)
 
                 const prism = {
                     "faceID": faceResult[0]._id,
