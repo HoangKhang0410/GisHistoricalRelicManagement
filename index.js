@@ -4,8 +4,9 @@ const cors = require("cors")
 require("dotenv").config()
 
 const authRouter = require("./routes/auth")
-const prismController = require("./routes/prism")
-const bodyCompController = require("./routes/bodyComp")
+const prismRouter = require("./routes/prism")
+const cylinderRouter = require("./routes/cylinder")
+const bodyComplexRouter = require("./routes/body_complex")
 
 const app = express()
 
@@ -32,8 +33,9 @@ const connectDB = async () => {
 connectDB();
 
 app.use("/api/auth", authRouter)
-app.use("/api/prism", prismController)
-app.use("/api/bodycomp", bodyCompController)
+app.use("/api/prism", prismRouter)
+app.use("/api/cylinder", cylinderRouter)
+app.use("/api/bodyComplex", bodyComplexRouter)
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
