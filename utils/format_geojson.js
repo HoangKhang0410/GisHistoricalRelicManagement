@@ -10,15 +10,23 @@ const formatObject = (data, type) => {
       polygonType = "Polygon"
       break;
     case "cylinder":
+      coordinates = data.map(item => {
+        return item.nodeIds.map(node => {
+          return [node.x, node.y, node.z]
+        })
+      })
+      polygonType = "Polygon"
       break;
     case "bodyComplex":
       coordinates = data.map(item => {
         return item.faceIDs.map(face => {
-          return face.nodeIds.map(node => {
+          const temp = face.nodeIds.map(node => {
             return [node.x, node.y, node.z]
           })
+          return [temp]
         })
       })
+      coordinates = coordinates[0]
       polygonType = "MultiPolygon"
       break;
     default:

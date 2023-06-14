@@ -23,6 +23,10 @@ GET http://localhost:3001/api/prism/path?path=ngomon/data/foundation/doors/cente
 Content-Type: application/json
 
 ###
+
+GET http://localhost:3001/api/bodyComplex/path?path=ngomon/data/foundation/doors/gate_back_left/gate_back_left.json
+Content-Type: application/json
+###
 POST http://localhost:3001/api/prism/saveprism
 Content-Type: application/json
 
