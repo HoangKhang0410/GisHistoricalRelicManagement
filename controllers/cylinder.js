@@ -10,10 +10,7 @@ const cylinderController = {
     const path = req.query.path;
     try {
       const cylinder = await Cylinder.find({ path: path }).populate({
-        path: 'faceID',
-        populate: {
-          path: 'nodeIds',
-        }
+        path: 'nodeIds',
       });
       if (!cylinder) return res.status(400).json({ success: false, message: 'Cylinder not found' });
       const result = formatObject(cylinder)
