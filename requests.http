@@ -31,7 +31,7 @@ POST http://localhost:3001/api/prism/saveprism
 Content-Type: application/json
 
 {
-    "directoryPath": "../GisHistoricalRelicManagement/data/foundation/walls/top_wall"
+    "directoryPath": "../GisHistoricalRelicManagement/data/centerBuilding/firstFloor/doors/back"
 }
 
 ###
@@ -47,14 +47,20 @@ POST http://localhost:3001/api/cylinder/savecylinder
 Content-Type: application/json
 
 {
-    "directoryPath": "../GisHistoricalRelicManagement/data/secondFloor/column"
+    "directoryPath": "../GisHistoricalRelicManagement/data/centerBuilding/firstFloor/columns"
 }
 
 ###
-DELETE  http://localhost:3001/api/cylinder/delete?path=ngomon/data/secondFloor/column/columnExtraL.geojson.json
+DELETE  http://localhost:3001/api/cylinder/delete?path=ngomon/data/centerBuilding/firstFloor/doors/back/center.building.doordecohori.3.geojson.json
+
+
+
+
+
+
 
 ###
-DELETE  http://localhost:3001/api/prism/delete?path=ngomon/data/foundation/rails/back_wall/floor.back.wall.rail.wall1.geojson.json
+DELETE  http://localhost:3001/api/prism/delete?path=ngomon/data/centerBuilding/firstFloor/columns/center.building.column16.geojson.json
 
 ###
 DELETE  http://localhost:3001/api/bodyComplex/delete?path=ngomon/data/foundation/doors/gate_right/gate_right_door_top.json

@@ -6,7 +6,7 @@ const cylinderSchema = new Schema({
     type: [
       {
         type: mongoose.Types.ObjectId,
-        ref: 'Nodes',
+        ref: 'Node',
         required: true,
       }
     ],
