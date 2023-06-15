@@ -57,6 +57,23 @@ const prismController = {
       console.log(error)
       res.status(500).json({ success: false, message: 'Internal server error' });
     }
+  },
+  deleteMultiPrism: async (req, res) => {
+    try {
+      const {paths} = req.body;
+
+      for(const path of paths) {
+        await deletePrismDocument(path)
+      }
+      
+      res.json({
+        success: true,
+        message: 'Delete prism successfully!',
+      });
+    } catch (error) {
+      console.log(error)
+      res.status(500).json({ success: false, message: 'Internal server error' });
+    }
   }
 }
 
