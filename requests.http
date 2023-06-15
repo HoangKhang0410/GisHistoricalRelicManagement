@@ -31,23 +31,30 @@ POST http://localhost:3001/api/prism/saveprism
 Content-Type: application/json
 
 {
-    "directoryPath": "../GisHistoricalRelicManagement/data/centerBuilding/secondFloor/floor"
+    "directoryPath": "../GisHistoricalRelicManagement/data/rightBuilding/secondFloor/rails"
 }
+
+
+
+
 
 ###
 POST http://localhost:3001/api/bodyComplex/savebodycomp
 Content-Type: application/json
 
 {
-    "directoryPath": "../GisHistoricalRelicManagement/data/centerBuilding/secondFloor/roof"
+    "directoryPath": "../GisHistoricalRelicManagement/data/rightBuilding/secondFloor/roof"
 }
+
+
+
 
 ###
 POST http://localhost:3001/api/cylinder/savecylinder
 Content-Type: application/json
 
 {
-    "directoryPath": "../GisHistoricalRelicManagement/data/centerBuilding/secondFloor/column"
+    "directoryPath": "../GisHistoricalRelicManagement/data/rightBuilding/secondFloor/columns"
 }
 
 ###
