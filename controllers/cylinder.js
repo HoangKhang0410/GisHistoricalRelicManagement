@@ -13,7 +13,7 @@ const cylinderController = {
         path: 'nodeIds',
       });
       if (!cylinder) return res.status(400).json({ success: false, message: 'Cylinder not found' });
-      const result = formatObject(cylinder)
+      const result = formatObject(cylinder, "cylinder")
       console.log(result)
       res.json(result);
     } catch (error) {
