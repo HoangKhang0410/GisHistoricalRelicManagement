@@ -51,6 +51,17 @@ Content-Type: application/json
 }
 
 ###
+POST http://localhost:3001/api/damageReport/create
+Content-Type: application/json
+
+{
+    "cause": "Cửa bị hư",
+    "content": "Cửa bị hư",
+    "userID": "64383e8e1d9873a509c800af",
+    "entityID": "64383e8e1d9873a509c800ab"  
+}
+
+###
 DELETE  http://localhost:3001/api/cylinder/delete?path=ngomon/data/secondFloor/column/columnExtraL.geojson.json
 
 ###
