@@ -39,16 +39,33 @@ const prismController = {
       });
       if (!prism) return res.status(400).json({ success: false, message: 'prism not found' });
       const result = formatObject(prism, "prism")
-      console.log(result)
       res.json(result);
     } catch (error) {
-      console.log(error)
+      console.log(path + "\n" + error)
+      res.status(500).json({ success: false, message: 'Internal server error' });
     }
   },
   deletePrism: async (req, res) => {
     try {
       const path = req.query.path;
       await deletePrismDocument(path)
+      res.json({
+        success: true,
+        message: 'Delete prism successfully!',
+      });
+    } catch (error) {
+      console.log(error)
+      res.status(500).json({ success: false, message: 'Internal server error' });
+    }
+  },
+  deleteMultiPrism: async (req, res) => {
+    try {
+      const {paths} = req.body;
+
+      for(const path of paths) {
+        await deletePrismDocument(path)
+      }
+      
       res.json({
         success: true,
         message: 'Delete prism successfully!',
