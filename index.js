@@ -33,6 +33,10 @@ const connectDB = async () => {
 
 connectDB();
 
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
+
 app.use("/api/auth", authRouter)
 app.use("/api/prism", prismRouter)
 app.use("/api/cylinder", cylinderRouter)
