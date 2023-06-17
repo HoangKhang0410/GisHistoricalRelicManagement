@@ -14,15 +14,7 @@ const app = express()
 app.use(express.json())
 
 
-app.use(cors())
-
-app.use(function(req, res, next) {
-  // update to match the domain you will make the request from
-  res.header("Access-Control-Allow-Origin", "http://127.0.0.1:5502/");
-  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept","Authorization");
-  next();
-  });
+app.use(cors({origin: '*'}))
 
 const connectDB = async () => {
   try {
