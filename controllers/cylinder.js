@@ -14,10 +14,10 @@ const cylinderController = {
       });
       if (!cylinder) return res.status(400).json({ success: false, message: 'Cylinder not found' });
       const result = formatObject(cylinder, "cylinder")
-      console.log(result)
       res.json(result);
     } catch (error) {
-      console.log(error)
+      console.log(path + "\n" + error)
+      res.status(500).json({ success: false, message: 'Internal server error' });
     }
   },
   saveCylinder: async (req, res) => {

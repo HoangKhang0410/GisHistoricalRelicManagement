@@ -39,10 +39,10 @@ const prismController = {
       });
       if (!prism) return res.status(400).json({ success: false, message: 'prism not found' });
       const result = formatObject(prism, "prism")
-      console.log(result)
       res.json(result);
     } catch (error) {
-      console.log(error)
+      console.log(path + "\n" + error)
+      res.status(500).json({ success: false, message: 'Internal server error' });
     }
   },
   deletePrism: async (req, res) => {
