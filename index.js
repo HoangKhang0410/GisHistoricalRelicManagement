@@ -14,6 +14,13 @@ const app = express()
 app.use(express.json())
 
 
+app.use(cors({
+  allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Methods', 'Access-Control-Request-Headers', 'Access-Control-Allow-Origin', 'Origin', 'X-Requested-With', 'Accept'],
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  credentials: true,
+}))
+
 app.use(function(req, res, next) {
   res.setHeader("Access-Control-Allow-Headers", "X-Requested-With,content-type, Accept,Authorization,Origin");
   res.setHeader("Access-Control-Allow-Origin", "*");
