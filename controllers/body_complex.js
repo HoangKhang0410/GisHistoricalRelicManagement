@@ -57,6 +57,26 @@ const bodyComplexController = {
       console.log(error)
       res.status(500).json({ success: false, message: 'Internal server error' });
     }
+  },
+  updateBodyComp: async (req, res) => {
+    updateBodyCompData(req, res)
+  }
+}
+
+async function updateBodyCompData(req, res) {
+  try {
+    const path = req.query.path;
+    const newData = req.body;
+
+    const updatedResult = await BodyComplex.findOneAndUpdate({ path }, newData, { new: true });
+    if (updatedResult) {
+      return res.send(updatedResult);
+    }
+
+    res.status(404).send(`Record with path ${path} not found.`);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server error');
   }
 }
 
@@ -98,6 +118,7 @@ async function saveBodyCompData(data) {
     console.log("The saveBodyCompData was successfully created.");
   } catch (error) {
     console.log("The transaction was aborted due to an unexpected error: " + error);
+    throw error
   } finally {
     session.endSession();
   }
