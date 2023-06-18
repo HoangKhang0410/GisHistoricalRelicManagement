@@ -34,14 +34,15 @@ const formatObject = (data, type) => {
   }
   const result = {
     "type": "FeatureCollection",
-    "generator": "smartcity",
-    "copyright": "Smartcity",
-    "timestamp": "2021-05-27T09:28:58Z",
+    "generator": "NHÓM 1",
+    "copyright": "Nhóm 1",
+    "timestamp": new Date().toISOString(),
     "features": [
       {
         "type": "Feature",
         "properties": {
           "Building name": data[0].name,
+          "Id": data[0].path,
           "height": data[0].height,
           "width": data[0].width,
           "color": data[0].color,
