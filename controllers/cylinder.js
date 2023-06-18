@@ -53,6 +53,26 @@ const cylinderController = {
       console.log(error)
       res.status(500).json({ success: false, message: 'Internal server error' });
     }
+  },
+  updateCylinder: async (req, res) => {
+    updateCylinderData(req, res)
+  }
+}
+
+async function updateCylinderData(req, res) {
+  try {
+    const path = req.query.path;
+    const newData = req.body;
+
+    const updatedResult = await Cylinder.findOneAndUpdate({ path }, newData, { new: true });
+    if (updatedResult) {
+      return res.send(updatedResult);
+    }
+
+    res.status(404).send(`Record with path ${path} not found.`);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server error');
   }
 }
 

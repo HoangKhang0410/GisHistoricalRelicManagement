@@ -74,6 +74,26 @@ const prismController = {
       console.log(error)
       res.status(500).json({ success: false, message: 'Internal server error' });
     }
+  },
+  updatePrism: async (req, res) => {
+    updatePrismData(req, res)
+  }
+}
+
+async function updatePrismData(req, res) {
+  try {
+    const path = req.query.path;
+    const newData = req.body;
+
+    const updatedResult = await Prism.updateMany({ path }, newData);
+    if (updatedResult) {
+      return res.send(updatedResult);
+    }
+
+    res.status(404).send(`Record with path ${path} not found.`);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server error');
   }
 }
 
