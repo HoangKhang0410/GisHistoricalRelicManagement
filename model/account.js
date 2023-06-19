@@ -13,11 +13,11 @@ const accountSchema = new Schema({
   },
   name: {
     type: String,
-    required: true,
+    required: true
   },
   role: {
     type: String,
-    require: true,
+    default: "User"
   },
   createdAt: {
     type: Date,

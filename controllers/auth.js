@@ -33,10 +33,10 @@ const updateRefreshToken = async (user, refreshToken) => {
 const authController = {
   register: async (req, res) => {
     const {
-      email, password, confirmPassword
+      email, password, confirmPassword, name
     } = req.body;
     //simple validation
-    if (!email || !password) return res.status(400).json({ success: false, message: 'Missing email or password' });
+    if (!email || !password || !name) return res.status(400).json({ success: false, message: 'Missing email, password or name' });
 
     try {
       const account = await Account.findOne({ email: email });
@@ -51,7 +51,9 @@ const authController = {
       const newAccount = new Account({
         email: email,
         password: hashedPassword,
+        name: name
       });
+      
       const tokens = generateTokens(newAccount);
 
       await newAccount.save();
