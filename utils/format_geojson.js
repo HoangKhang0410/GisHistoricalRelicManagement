@@ -42,7 +42,8 @@ const formatObject = (data, type) => {
         "type": "Feature",
         "properties": {
           "Building name": data[0].name,
-          "Id": data[0].path,
+          "Id": data[0]._id,
+          "Path": data[0].path,
           "height": data[0].height,
           "width": data[0].width,
           "color": data[0].color,

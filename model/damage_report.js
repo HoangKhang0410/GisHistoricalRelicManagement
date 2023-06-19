@@ -14,17 +14,8 @@ const damageReportSchema = new Schema({
     type: mongoose.Types.ObjectId,
     ref: 'Accounts',
   },
-  prismID: {
-    type: mongoose.Types.ObjectId,
-    ref: "Prism"
-  },
-  cylinderID: {
-    type: mongoose.Types.ObjectId,
-    ref: "Cylinder"
-  },
-  bodyCompID: {
-    type: mongoose.Types.ObjectId,
-    ref: "BodyComplex"
+  entityID: {
+    type: mongoose.Types.ObjectId
   },
   createdAt: {
     type: Date,
