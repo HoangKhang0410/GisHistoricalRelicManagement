@@ -8,7 +8,13 @@ const damageReportController = {
           path: 'userID',
         },
         {
-          path: 'entityID',
+          path: 'prismID',
+        },
+        {
+          path: 'cylinderID',
+        },
+        {
+          path: 'bodyCompID',
         }
       ]);
       if (!damageReport) return res.status(400).json({ success: false, message: 'The report not found' });
@@ -19,12 +25,14 @@ const damageReportController = {
   },
   saveDamageReport: async (req, res) => {
     try {
-      const { cause, content, userID, entityID } = req.body
+      const { cause, content, userID, prismID, cylinderID, bodyCompID } = req.body
       const damageReport = await DamageReport.create({
         cause,
         content,
         userID,
-        entityID
+        prismID, 
+        cylinderID, 
+        bodyCompID
       })
       res.status(201).json({ damageReport })
     } catch (error) {

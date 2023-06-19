@@ -18,9 +18,17 @@ const entityRepairStatusSchema = new Schema({
     type: String,
     require: true,
   },
-  entityID: {
+  prismID: {
     type: mongoose.Types.ObjectId,
-    ref: 'Entities'
+    ref: "Prism"
+  },
+  cylinderID: {
+    type: mongoose.Types.ObjectId,
+    ref: "Cylinder"
+  },
+  bodyCompID: {
+    type: mongoose.Types.ObjectId,
+    ref: "BodyComplex"
   },
   accountID: {
     type: mongoose.Types.ObjectId,
