@@ -8,6 +8,8 @@ const prismRouter = require("./routes/prism")
 const cylinderRouter = require("./routes/cylinder")
 const bodyComplexRouter = require("./routes/body_complex")
 const damageReportRouter = require("./routes/damage_report")
+const notificationRouter = require("./routes/notification")
+const materialRouter = require("./routes/material")
 
 const app = express()
 
@@ -44,6 +46,8 @@ app.use("/api/prism", prismRouter)
 app.use("/api/cylinder", cylinderRouter)
 app.use("/api/bodyComplex", bodyComplexRouter)
 app.use("/api/damageReport", damageReportRouter)
+app.use("/api/notification", notificationRouter)
+app.use("/api/material", materialRouter)
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {

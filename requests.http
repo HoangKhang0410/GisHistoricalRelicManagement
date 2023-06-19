@@ -61,6 +61,43 @@
 #     "directoryPath": "../GisHistoricalRelicManagement/data/rightBuilding/secondFloor/columns"
 # }
 
+###
+POST http://localhost:3001/api/material/create
+Content-Type: application/json
+
+{
+    "name": "Xi măng",
+    "age": 100,
+    "description": "Đổ bê tông"
+}
+
+###
+GET http://localhost:3001/api/material
+Content-Type: application/json
+
+###
+GET http://localhost:3001/api/material/64906e52c57642574918c235
+Content-Type: application/json
+
+### 
+PATCH http://localhost:3001/api/material/update
+Content-Type: application/json
+
+{
+   "filter": {
+        "_id": "64906e52c57642574918c235"
+    },
+    "update": {
+        "name": "Xi măng updated",
+        "age": 100,
+        "description": "Đổ bê tông"
+    }
+}
+
+###
+GET http://localhost:3001/api/notification
+Content-Type: application/json
+
 # ###
 # DELETE  http://localhost:3001/api/cylinder/delete?path=ngomon/data/centerBuilding/firstFloor/doors/back/center.building.doordecohori.3.geojson.json
 
@@ -75,7 +112,5 @@
 
 # ###
 # DELETE  http://localhost:3001/api/bodyComplex/delete?path=ngomon/data/foundation/doors/gate_right/gate_right_door_top.json
-
-
 
 
