@@ -36,13 +36,16 @@ const cylinderSchema = new Schema({
     required: true,
   },
   materialIds: {
-    type: [
-      {
+    type: [{
+      id: {
         type: mongoose.Types.ObjectId,
         ref: 'Material',
-        required: true,
+      },
+      ageStartTime: {
+        type: Date,
+        default: Date.now
       }
-    ],
+    }]
   },
   createdAt: {
     type: Date,

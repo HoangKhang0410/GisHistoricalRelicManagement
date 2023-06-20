@@ -30,6 +30,18 @@ const prismSchema = new Schema({
     type: String,
     required: true,
   },
+  materialIds: {
+    type: [{
+      id: {
+        type: mongoose.Types.ObjectId,
+        ref: 'Material',
+      },
+      ageStartTime: {
+        type: Date,
+        default: Date.now
+      }
+    }]
+  },
   createdAt: {
     type: Date,
     default: Date.now,
