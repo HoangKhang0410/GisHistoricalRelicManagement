@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const bodyComplexSchema = new Schema({
   faceIDs: {
-    type: [{ 
+    type: [{
       type: mongoose.Types.ObjectId,
       ref: 'Face',
       required: true,
@@ -11,12 +11,16 @@ const bodyComplexSchema = new Schema({
     required: true
   },
   materialIds: {
-    type: [
-      {
+    type: [{
+      id: {
         type: mongoose.Types.ObjectId,
         ref: 'Material',
+      },
+      ageStartTime: {
+        type: Date,
+        default: Date.now
       }
-    ]
+    }]
   },
   height: {
     type: Number,
