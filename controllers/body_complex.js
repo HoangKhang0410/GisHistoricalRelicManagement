@@ -15,6 +15,12 @@ const bodyComplexController = {
         populate: {
           path: 'nodeIds',
         }
+      }).populate({
+        path: 'materialIds',
+        populate: {
+          path: 'materialId',
+          model: 'Material'
+        }
       });
       if (!bodyComplex) return res.status(400).json({ success: false, message: 'BodyComplex not found' });
       const result = formatObject(bodyComplex, "bodyComplex")
@@ -166,7 +172,7 @@ async function addMaterialData(req, res) {
     const filter = { path: { $in: paths } };
     const update = { $set: { materialIds: materials } };
     const options = { multi: true };
-    
+
     const updateData = await BodyComplex.updateMany(filter, update, options);
 
     if (updateData) {
@@ -174,7 +180,7 @@ async function addMaterialData(req, res) {
     }
 
     res.status(500).send(`Can't add material.`);
-    
+
   } catch (error) {
     console.error(error);
     res.status(500).send('Server error');

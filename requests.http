@@ -24,8 +24,8 @@
 
 # ###
 
-# GET http://localhost:3001/api/bodyComplex/path?path=ngomon/data/foundation/doors/gate_back_left/gate_back_left.json
-# Content-Type: application/json
+GET http://localhost:3001/api/bodyComplex/path?path=ngomon/data/foundation/doors/gate_back_left/gate_back_left_door.json
+Content-Type: application/json
 
 
 
@@ -76,7 +76,7 @@ GET http://localhost:3001/api/material
 Content-Type: application/json
 
 ###
-GET http://localhost:3001/api/material/64906e52c57642574918c235
+GET http://localhost:3001/api/material/6491c6cc0c282d5789117b54
 Content-Type: application/json
 
 ### 

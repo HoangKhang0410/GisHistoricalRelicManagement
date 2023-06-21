@@ -19,7 +19,7 @@ const bodyComplexSchema = new Schema({
       },
       ageStartTime: {
         type: Date,
-        default: Date.now(),
+        default: Date.now,
         required: true
       }
     }]
