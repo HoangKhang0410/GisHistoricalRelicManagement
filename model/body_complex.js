@@ -12,13 +12,15 @@ const bodyComplexSchema = new Schema({
   },
   materialIds: {
     type: [{
-      id: {
+      materialId: {
         type: mongoose.Types.ObjectId,
         ref: 'Material',
+        required: true
       },
       ageStartTime: {
         type: Date,
-        default: Date.now
+        default: Date.now(),
+        required: true
       }
     }]
   },

@@ -65,6 +65,9 @@ const bodyComplexController = {
   },
   updateBodyComp: async (req, res) => {
     updateBodyCompData(req, res)
+  },
+  addMaterialForManyBodyComp: (req, res) => {
+    addMaterialData(req, res)
   }
 }
 
@@ -159,6 +162,27 @@ async function deleteBodyCompDocument(path) {
     throw error
   } finally {
     session.endSession();
+  }
+}
+
+async function addMaterialData(req, res) {
+  try {
+    const { materials, paths } = req.body
+    const filter = { path: { $in: paths } };
+    const update = { $set: { materialIds: materials } };
+    const options = { multi: true };
+    
+    const updateData = await BodyComplex.updateMany(filter, update, options);
+
+    if (updateData) {
+      return res.send(updateData);
+    }
+
+    res.status(500).send(`Can't add material.`);
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server error');
   }
 }
 
