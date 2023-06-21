@@ -15,10 +15,15 @@ const bodyComplexController = {
         populate: {
           path: 'nodeIds',
         }
+      }).populate({
+        path: 'materialIds',
+        populate: {
+          path: 'id'
+        }
       });
       if (!bodyComplex) return res.status(400).json({ success: false, message: 'BodyComplex not found' });
-      const result = formatObject(bodyComplex, "bodyComplex")
-      res.json(result);
+      // const result = formatObject(bodyComplex, "bodyComplex")
+      res.json(bodyComplex);
     } catch (error) {
       console.log(path + "\n" + error)
       res.status(500).json({ success: false, message: 'Internal server error' });
