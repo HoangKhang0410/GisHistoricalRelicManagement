@@ -36,6 +36,12 @@ const prismController = {
         populate: {
           path: 'nodeIds',
         }
+      }).populate({
+        path: 'materialIds',
+        populate: {
+          path: 'materialId',
+          model: 'Material'
+        }
       });
       if (!prism) return res.status(400).json({ success: false, message: 'prism not found' });
       const result = formatObject(prism, "prism")

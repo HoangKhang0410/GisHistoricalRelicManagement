@@ -82,7 +82,7 @@ const formatObject = (data, type) => {
           "height": data[0].height,
           "width": data[0].width,
           "color": data[0].color,
-          "name": name,
+          "Materials": name,
           "message": message.join(", "),
           "idb": "1"
         },
