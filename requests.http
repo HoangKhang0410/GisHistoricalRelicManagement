@@ -24,7 +24,7 @@
 
 # ###
 
-GET http://localhost:3001/api/bodyComplex/path?path=ngomon/data/centerBuilding/secondFloor/roof/CB.SF.decoRoof2.geojson.json
+GET http://localhost:3001/api/bodyComplex/path?path=ngomon/data/foundation/doors/gate_back_left/gate_back_left_door.json
 Content-Type: application/json
 
 

@@ -1,5 +1,5 @@
 const formatObject = (data, type) => {
-  var coordinates, polygonType
+  var coordinates, polygonType, materials, name
   switch (type) {
     case "prism":
       coordinates = data.map(item => {
@@ -32,6 +32,41 @@ const formatObject = (data, type) => {
     default:
       break;
   }
+  materials = data.map(item => {
+    return item.materialIds.map(material => {
+      return {
+        material: material.materialId,
+        ageStartTime: material.ageStartTime
+      }
+    })
+  })
+  name = materials.flat().map(item => {
+    return item.material.name
+  }).join(", ")
+  let message = []
+  const isGood = materials.flat().every(item => {
+    different = Math.ceil((new Date().getTime() - item.ageStartTime.getTime()) / (1000 * 60 * 60 * 24 * 365))
+    return item.material.age > different && item.material.age - different > 1
+  })
+  const isBad = materials.flat().some(item => {
+    different = Math.ceil((new Date().getTime() - item.ageStartTime.getTime()) / (1000 * 60 * 60 * 24 * 365))
+    return item.material.age <= different
+  })
+
+  materials.flat().forEach(item => {
+    different = Math.ceil((new Date().getTime() - item.ageStartTime.getTime()) / (1000 * 60 * 60 * 24 * 365))
+    if (item.material.age - different <= 1 && item.material.age > different) {
+      message.push(`${item.material.name} sắp quá tuổi thọ`)
+    }
+  })
+  if (isGood) {
+    message.push("Còn tốt")
+  }
+
+  if (isBad) {
+    message.push("Đã hỏng")
+  }
+
   const result = {
     "type": "FeatureCollection",
     "generator": "NHÓM 1",
@@ -47,6 +82,8 @@ const formatObject = (data, type) => {
           "height": data[0].height,
           "width": data[0].width,
           "color": data[0].color,
+          "name": name,
+          "message": message.join(", "),
           "idb": "1"
         },
         "geometry": {
