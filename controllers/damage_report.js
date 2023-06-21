@@ -17,7 +17,7 @@ const damageReportController = {
       const cylinder = Cylinder.findById(damageReport.entityID).select('name description path height width color')
       const bodyComp = BodyComp.findById(damageReport.entityID).select('name description path height width color')
 
-      var entities = await Promise.all(prism, cylinder, bodyComp)
+      var entities = await Promise.all([prism, cylinder, bodyComp])
       entities = entities.filter(entity => entity === null)
 
       delete damageReport.entityID
