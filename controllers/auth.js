@@ -76,7 +76,7 @@ const authController = {
     try {
       // check user existing
       const account = await Account.findOne({ email })
-      if (!account) return res.status(400).json({ success: false, message: 'Incorrect email' });
+      if (!account || account.role != role) return res.status(400).json({ success: false, message: 'Incorrect email' });
 
       const passwordValid = await bcrypt.compare(password, account.password);
 
