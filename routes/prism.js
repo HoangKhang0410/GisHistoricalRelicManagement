@@ -7,6 +7,7 @@ router.post("/saveprism", prismController.savePrism)
 router.delete("/delete", prismController.deletePrism)
 router.post("/deletes", prismController.deleteMultiPrism)
 router.put("/update", filterUpdateData, prismController.updatePrism)
+router.put("/addMaterialForMultiPrism", prismController.addMaterialForManyPrism)
 
 
 

@@ -77,6 +77,9 @@ const prismController = {
   },
   updatePrism: async (req, res) => {
     updatePrismData(req, res)
+  },
+  addMaterialForManyPrism: (req, res) => {
+    addMaterialData(req, res)
   }
 }
 
@@ -165,6 +168,28 @@ async function deletePrismDocument(path) {
     session.endSession();
   }
 }
+
+async function addMaterialData(req, res) {
+  try {
+    const { materials, paths } = req.body
+    const filter = { path: { $in: paths } };
+    const update = { $set: { materialIds: materials } };
+    const options = { multi: true };
+    
+    const updateData = await Prism.updateMany(filter, update, options);
+
+    if (updateData) {
+      return res.send(updateData);
+    }
+
+    res.status(500).send(`Can't add material.`);
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server error');
+  }
+}
+
 
 
 module.exports = prismController
