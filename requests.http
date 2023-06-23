@@ -1,28 +1,28 @@
-# POST http://localhost:3001/api/auth/register
-# Content-Type: application/json
+POST http://localhost:3001/api/auth/register
+Content-Type: application/json
 
-# {
-#     "email": "ninja@gmail.com",
-#     "password": "123",
-#     "confirmPassword": "123"
-# }
+{
+    "email": "ninja@gmail.com",
+    "password": "123",
+    "confirmPassword": "123"
+}
 
 
-# ###
-# POST http://localhost:3001/api/auth/login
-# Content-Type: application/json
+###
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
 
-# {
-#     "email": "ninja@gmail.com",
-#     "password": "123"
-# }
+{
+    "email": "ninja@gmail.com",
+    "password": "123"
+}
 
-# ###
+###
 
-# GET http://localhost:3001/api/prism/path?path=ngomon/data/foundation/doors/center_entry/left_wall.geojson.json
-# Content-Type: application/json
+GET http://localhost:3001/api/prism/path?path=ngomon/data/foundation/doors/center_entry/left_wall.geojson.json
+Content-Type: application/json
 
-# ###
+###
 
 GET http://localhost:3001/api/bodyComplex/path?path=ngomon/data/foundation/doors/gate_back_left/gate_back_left_door.json
 Content-Type: application/json
@@ -30,36 +30,36 @@ Content-Type: application/json
 
 
 
-# ###
-# POST http://localhost:3001/api/prism/saveprism
-# Content-Type: application/json
+###
+POST http://localhost:3001/api/prism/saveprism
+Content-Type: application/json
 
-# {
-#     "directoryPath": "../GisHistoricalRelicManagement/data/centerBuilding/secondFloor/door/RDoor"
-# }
-
-
-
-
-
-# ###
-# POST http://localhost:3001/api/bodyComplex/savebodycomp
-# Content-Type: application/json
-
-# {
-#     "directoryPath": "../GisHistoricalRelicManagement/data/rightBuilding/secondFloor/roof"
-# }
+{
+    "directoryPath": "../GisHistoricalRelicManagement/data/centerBuilding/secondFloor/door/RDoor"
+}
 
 
 
 
-# ###
-# POST http://localhost:3001/api/cylinder/savecylinder
-# Content-Type: application/json
 
-# {
-#     "directoryPath": "../GisHistoricalRelicManagement/data/rightBuilding/secondFloor/columns"
-# }
+###
+POST http://localhost:3001/api/bodyComplex/savebodycomp
+Content-Type: application/json
+
+{
+    "directoryPath": "../GisHistoricalRelicManagement/data/rightBuilding/secondFloor/roof"
+}
+
+
+
+
+###
+POST http://localhost:3001/api/cylinder/savecylinder
+Content-Type: application/json
+
+{
+    "directoryPath": "../GisHistoricalRelicManagement/data/rightBuilding/secondFloor/columns"
+}
 
 ###
 POST http://localhost:3001/api/material/create
@@ -98,8 +98,8 @@ Content-Type: application/json
 GET http://localhost:3001/api/notification
 Content-Type: application/json
 
-# ###
-# DELETE  http://localhost:3001/api/cylinder/delete?path=ngomon/data/centerBuilding/firstFloor/doors/back/center.building.doordecohori.3.geojson.json
+###
+DELETE  http://localhost:3001/api/cylinder/delete?path=ngomon/data/centerBuilding/firstFloor/doors/back/center.building.doordecohori.3.geojson.json
 
 
 
@@ -107,10 +107,10 @@ Content-Type: application/json
 
 
 
-# ###
-# DELETE  http://localhost:3001/api/prism/delete?path=ngomon/data/centerBuilding/firstFloor/columns/center.building.column16.geojson.json
+###
+DELETE  http://localhost:3001/api/prism/delete?path=ngomon/data/centerBuilding/firstFloor/columns/center.building.column16.geojson.json
 
-# ###
-# DELETE  http://localhost:3001/api/bodyComplex/delete?path=ngomon/data/foundation/doors/gate_right/gate_right_door_top.json
+###
+DELETE  http://localhost:3001/api/bodyComplex/delete?path=ngomon/data/foundation/doors/gate_right/gate_right_door_top.json
 
 
