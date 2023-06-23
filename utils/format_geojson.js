@@ -79,11 +79,11 @@ const formatObject = (data, type) => {
           "Building name": data[0].name,
           "Id": data[0]._id,
           "Path": data[0].path,
-          "height": data[0].height,
-          "width": data[0].width,
-          "color": data[0].color,
-          "name": name,
-          "message": message.join(", "),
+          "Height": data[0].height,
+          "Width": data[0].width,
+          "Color": data[0].color,
+          "Materials": name,
+          "Status": message.join(", "),
           "idb": "1"
         },
         "geometry": {

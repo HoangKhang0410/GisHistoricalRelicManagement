@@ -11,6 +11,12 @@ const cylinderController = {
     try {
       const cylinder = await Cylinder.find({ path: path }).populate({
         path: 'nodeIds',
+      }).populate({
+        path: 'materialIds',
+        populate: {
+          path: 'materialId',
+          model: 'Material'
+        }
       });
       if (!cylinder) return res.status(400).json({ success: false, message: 'Cylinder not found' });
       const result = formatObject(cylinder, "cylinder")
